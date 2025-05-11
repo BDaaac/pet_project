@@ -6,9 +6,10 @@ from aiogram.types import Message, FSInputFile
 from aiogram.filters import Command
 from aiogram.client.default import DefaultBotProperties
 from yt_dlp import YoutubeDL
+import os
+API_TOKEN = os.getenv("API_TOKEN")
 
 # Токен твоего бота
-API_TOKEN = "8173585534:AAHm-bjavle-BPOa8KNnrc4SPU1OuSZMQ8s"
 
 # Правильная инициализация бота и диспетчера
 bot = Bot(

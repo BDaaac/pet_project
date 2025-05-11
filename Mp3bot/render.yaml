@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: youtube-mp3-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: bash start.sh
+    envVars:
+      - key: API_TOKEN
+        value: 8173585534:AAHm-bjavle-BPOa8KNnrc4SPU1OuSZMQ8s
