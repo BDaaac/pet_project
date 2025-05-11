@@ -21,14 +21,10 @@ dp = Dispatcher()
 # Папка для временного хранения
 SAVE_DIR = "downloads"
 os.makedirs(SAVE_DIR, exist_ok=True)
-
 def download_mp3(url: str) -> str:
-    FFMPEG_PATH = r"C:\Users\Димаш\Downloads\ffmpeg-7.1-essentials_build\ffmpeg-7.1-essentials_build\bin"
-
     ydl_opts = {
         'format': 'bestaudio/best',
         'outtmpl': os.path.join(SAVE_DIR, '%(title)s.%(ext)s'),
-        'ffmpeg_location': FFMPEG_PATH,  # <--- указываем путь
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
